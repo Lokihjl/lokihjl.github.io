@@ -22,14 +22,16 @@
 
   <meta name="description" content="了解进制的种类，并在学习各种进制互相的转换.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="进制学习与互转">
+<meta property="og:title" content="进制讲解与互转">
 <meta property="og:url" content="https://lokihjl.github.io/2024/09/12/2024-09-12-%E8%BF%9B%E5%88%B6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%BD%AC%E6%8D%A2/index.html">
 <meta property="og:site_name" content="Loki博客">
 <meta property="og:description" content="了解进制的种类，并在学习各种进制互相的转换.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://lokihjl.github.io/images/convert.png">
+<meta property="og:image" content="https://lokihjl.github.io/images/zhegnshu.png">
+<meta property="og:image" content="https://lokihjl.github.io/images/xiaoshu.png">
 <meta property="article:published_time" content="2024-09-12T07:56:20.000Z">
-<meta property="article:modified_time" content="2024-09-12T05:48:23.317Z">
+<meta property="article:modified_time" content="2024-09-12T08:54:42.488Z">
 <meta property="article:author" content="Loki">
 <meta property="article:tag" content="二进制">
 <meta property="article:tag" content="十进制，转换">
@@ -49,7 +51,7 @@
   };
 </script>
 
-  <title>进制学习与互转 | Loki博客</title>
+  <title>进制讲解与互转 | Loki博客</title>
   
 
 
@@ -168,7 +170,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          进制学习与互转
+          进制讲解与互转
         </h1>
 
         <div class="post-meta">
@@ -179,7 +181,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-09-12 15:56:20 / 修改时间：13:48:23" itemprop="dateCreated datePublished" datetime="2024-09-12T15:56:20+08:00">2024-09-12</time>
+              <time title="创建时间：2024-09-12 15:56:20 / 修改时间：16:54:42" itemprop="dateCreated datePublished" datetime="2024-09-12T15:56:20+08:00">2024-09-12</time>
             </span>
 
           
@@ -218,6 +220,19 @@
 <li>各个数位的权是16的幂。</li>
 </ul>
 <h3 id="进制之间的对照关系"><a href="#进制之间的对照关系" class="headerlink" title="进制之间的对照关系"></a>进制之间的对照关系</h3><p>  <img src="/images/convert.png" alt="关系" title="关系"></p>
+<h3 id="数制转换"><a href="#数制转换" class="headerlink" title="数制转换"></a>数制转换</h3><h4 id="二进制数与八进制数的相互转换"><a href="#二进制数与八进制数的相互转换" class="headerlink" title="二进制数与八进制数的相互转换"></a>二进制数与八进制数的相互转换</h4><ul>
+<li>二进制数转换为八进制数:将二进制数由小数点开始，整数部分向左，小数部分向右，每3位分成一组，不够3位补零，则每组二进制数便是一位八进制数。<br>001<font color="#FF0000">|</font>101<font color="#FF0000">|</font>010<font color="#FF0000">|</font>.01<font color="#FF0000">0</font>&#x3D;(152.2)<sub>8</sub></li>
+<li>八进制数转换为二进制数:将每位八进制数用3位二进制数表示。<br>(374.26)<sub>8</sub>&#x3D;011<font color="#FF0000">|</font>111<font color="#FF0000">|</font>100<font color="#FF0000">|</font>.010<font color="#FF0000">|</font>110</li>
+</ul>
+<h4 id="二进制数与十六进制数的相互转换"><a href="#二进制数与十六进制数的相互转换" class="headerlink" title="二进制数与十六进制数的相互转换"></a>二进制数与十六进制数的相互转换</h4><ul>
+<li>二进制数与十六进制数的相互转换，按照每4位二进制数对应于一位十六进制数进行转换。<br><font color="#FF0000">0</font>001<font color="#FF0000">|</font>1101<font color="#FF0000">|</font>0100<font color="#FF0000">|</font>.011<font color="#FF0000">0</font>&#x3D;(1E8.6)<sub>16</sub></li>
+</ul>
+<p>(AF4.76)<sub>16</sub>&#x3D;1010<font color="#FF0000">|</font>1111<font color="#FF0000">|</font>0100<font color="#FF0000">|</font>.0111<font color="#FF0000">|</font>0110</p>
+<h4 id="十进制数转换二进制数"><a href="#十进制数转换二进制数" class="headerlink" title="十进制数转换二进制数"></a>十进制数转换二进制数</h4><ul>
+<li>采用的方法 —基数连除、连乘法，原理：将整数部分和小数部分分别进行转换整数部分采用基数连除法，小数部分采用基数连乘法，转换后再合并。</li>
+</ul>
+<h5 id="整数部分采用基数连除法先得到的余数为低位，后得到的余数为高位。"><a href="#整数部分采用基数连除法先得到的余数为低位，后得到的余数为高位。" class="headerlink" title="整数部分采用基数连除法先得到的余数为低位，后得到的余数为高位。"></a>整数部分采用基数连除法先得到的余数为低位，后得到的余数为高位。</h5><p>  <img src="/images/zhegnshu.png" alt="整数" title="整数"></p>
+<h5 id="小数部分采用基数连乘法先得到的整数为高位，后得到的整数为低位。"><a href="#小数部分采用基数连乘法先得到的整数为高位，后得到的整数为低位。" class="headerlink" title="小数部分采用基数连乘法先得到的整数为高位，后得到的整数为低位。"></a>小数部分采用基数连乘法先得到的整数为高位，后得到的整数为低位。</h5><p>  <img src="/images/xiaoshu.png" alt="小数" title="小数"><br>  例子：（88.375）<sub>16</sub> &#x3D; （1011000.011）<sub>2</sub></p>
 
     </div>
 
@@ -299,7 +314,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6%E7%9A%84%E4%BB%8B%E7%BB%8D%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">进制的介绍：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E8%BF%9B%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text">十进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="nav-number">3.</span> <span class="nav-text">二进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AB%E8%BF%9B%E5%88%B6"><span class="nav-number">4.</span> <span class="nav-text">八进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6"><span class="nav-number">5.</span> <span class="nav-text">十六进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%AF%B9%E7%85%A7%E5%85%B3%E7%B3%BB"><span class="nav-number">6.</span> <span class="nav-text">进制之间的对照关系</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6%E7%9A%84%E4%BB%8B%E7%BB%8D%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">进制的介绍：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E8%BF%9B%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text">十进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="nav-number">3.</span> <span class="nav-text">二进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AB%E8%BF%9B%E5%88%B6"><span class="nav-number">4.</span> <span class="nav-text">八进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6"><span class="nav-number">5.</span> <span class="nav-text">十六进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%AF%B9%E7%85%A7%E5%85%B3%E7%B3%BB"><span class="nav-number">6.</span> <span class="nav-text">进制之间的对照关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="nav-number">7.</span> <span class="nav-text">数制转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E4%B8%8E%E5%85%AB%E8%BF%9B%E5%88%B6%E6%95%B0%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="nav-number">7.1.</span> <span class="nav-text">二进制数与八进制数的相互转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E4%B8%8E%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%95%B0%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="nav-number">7.2.</span> <span class="nav-text">二进制数与十六进制数的相互转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="nav-number">7.3.</span> <span class="nav-text">十进制数转换二进制数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86%E9%87%87%E7%94%A8%E5%9F%BA%E6%95%B0%E8%BF%9E%E9%99%A4%E6%B3%95%E5%85%88%E5%BE%97%E5%88%B0%E7%9A%84%E4%BD%99%E6%95%B0%E4%B8%BA%E4%BD%8E%E4%BD%8D%EF%BC%8C%E5%90%8E%E5%BE%97%E5%88%B0%E7%9A%84%E4%BD%99%E6%95%B0%E4%B8%BA%E9%AB%98%E4%BD%8D%E3%80%82"><span class="nav-number">7.3.1.</span> <span class="nav-text">整数部分采用基数连除法先得到的余数为低位，后得到的余数为高位。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B0%8F%E6%95%B0%E9%83%A8%E5%88%86%E9%87%87%E7%94%A8%E5%9F%BA%E6%95%B0%E8%BF%9E%E4%B9%98%E6%B3%95%E5%85%88%E5%BE%97%E5%88%B0%E7%9A%84%E6%95%B4%E6%95%B0%E4%B8%BA%E9%AB%98%E4%BD%8D%EF%BC%8C%E5%90%8E%E5%BE%97%E5%88%B0%E7%9A%84%E6%95%B4%E6%95%B0%E4%B8%BA%E4%BD%8E%E4%BD%8D%E3%80%82"><span class="nav-number">7.3.2.</span> <span class="nav-text">小数部分采用基数连乘法先得到的整数为高位，后得到的整数为低位。</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

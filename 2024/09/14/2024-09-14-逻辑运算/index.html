@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lokihjl.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="逻辑运算的介绍与运算.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="逻辑运算">
+<meta property="og:url" content="https://lokihjl.github.io/2024/09/14/2024-09-14-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/index.html">
+<meta property="og:site_name" content="Loki博客">
+<meta property="og:description" content="逻辑运算的介绍与运算.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lokihjl.github.io/images/yu.png">
+<meta property="og:image" content="https://lokihjl.github.io/images/huo.png">
+<meta property="og:image" content="https://lokihjl.github.io/images/fei.png">
+<meta property="og:image" content="https://lokihjl.github.io/images/yihuo.png">
+<meta property="og:image" content="https://lokihjl.github.io/images/yufei.png">
+<meta property="og:image" content="https://lokihjl.github.io/images/huofei.png">
+<meta property="og:image" content="https://lokihjl.github.io/images/tonghuo.png">
+<meta property="og:image" content="https://lokihjl.github.io/images/yuhuofei.png">
+<meta property="og:image" content="https://lokihjl.github.io/images/dinglv1.png">
+<meta property="og:image" content="https://lokihjl.github.io/images/dinglv2.png">
+<meta property="article:published_time" content="2024-09-14T11:36:20.000Z">
+<meta property="article:modified_time" content="2024-09-14T07:27:44.446Z">
+<meta property="article:author" content="Loki">
+<meta property="article:tag" content="逻辑运算">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lokihjl.github.io/images/yu.png">
+
+<link rel="canonical" href="https://lokihjl.github.io/2024/09/14/2024-09-14-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>逻辑运算 | Loki博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Loki博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">大龄程序员逆向之路</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lokihjl.github.io/2024/09/14/2024-09-14-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Loki">
+      <meta itemprop="description" content="大龄Java程序转行嵌入式学习之路">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Loki博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          逻辑运算
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-09-14 19:36:20 / 修改时间：15:27:44" itemprop="dateCreated datePublished" datetime="2024-09-14T19:36:20+08:00">2024-09-14</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <div class="post-description">逻辑运算的介绍与运算.</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="四种基本逻辑运算"><a href="#四种基本逻辑运算" class="headerlink" title="四种基本逻辑运算"></a>四种基本逻辑运算</h2><h3 id="1、“与”逻辑（AND）"><a href="#1、“与”逻辑（AND）" class="headerlink" title="1、“与”逻辑（AND）"></a>1、“与”逻辑（AND）</h3><p>  定义：“与”逻辑是基本逻辑运算中的一种，通常用符号“&amp;&amp;”或“·”表示。在“与”逻辑中，只有当所有参与运算的条件都为真时，最终的结果才为真；只要其中有一个条件为假，结果就为假。</p>
+<p>例如，设有两个条件 A 和 B：</p>
+<ul>
+<li>当 A &#x3D; 1（真），B &#x3D; 1（真）时，A 与 B 的结果为 1（真）。</li>
+<li>当 A &#x3D; 1（真），B &#x3D; 0（假）时，A 与 B 的结果为 0（假）。</li>
+<li>当 A &#x3D; 0（假），B &#x3D; 1（真）时，A 与 B 的结果为 0（假）。</li>
+<li>当 A &#x3D; 0（假），B &#x3D; 0（假）时，A 与 B 的结果为 0（假）。</li>
+</ul>
+<p>在A与B进行“与”逻辑运算时可以写成<br>  Y &#x3D; A · B<br>为了简化缩写允许将<br>  A ⋅ B<br>写为AB，省略相乘的运算符号“⋅”。“与”门的逻辑符号如下所示。<br>  <img src="/images/yu.png" alt="与" title="与"></p>
+<p>说明：在计算机编程中，“与”逻辑常用于条件判断。在数字电路中，“与”逻辑可以通过与门来实现，只有当所有输入都为高电平时，输出才为高电平。</p>
+<h3 id="2、“或”逻辑-OR"><a href="#2、“或”逻辑-OR" class="headerlink" title="2、“或”逻辑(OR)"></a>2、“或”逻辑(OR)</h3><p>  定义：“或”逻辑也是基本逻辑运算之一，通常用符号“||”或“+”来表示。在“或”逻辑中，只要参与运算的条件中有一个为真，最终的结果就为真；只有当所有条件都为假时，结果才为假。</p>
+<p>例如，设有两个条件 A和 B ：</p>
+<ul>
+<li>当 A &#x3D; 1（真），B &#x3D; 1（真）时，A 或 B 的结果为 1（真）。</li>
+<li>当 A &#x3D; 1（真），B &#x3D; 0（假）时，A 或 B 的结果为 1（真）。</li>
+<li>当 A &#x3D; 0（假），B &#x3D; 1（真）时，A 或 B 的结果为 1（真）。</li>
+<li>当 A &#x3D; 0（假），B &#x3D; 0（假）时，A 或 B 的结果为 0（假）。</li>
+</ul>
+<p>在逻辑代数中，以“+”表示“或”运算，A与B进行“或”运算时可以写成<br>  Y &#x3D; A + B<br>“或”门的逻辑符号如下所示。<br>  <img src="/images/huo.png" alt="或" title="或"></p>
+<p>说明：在计算机编程中，“或”逻辑常用于设置多种满足条件的情况。例如，判断用户输入的密码是“123”或者“321”时，就运用了“或”逻辑。在数字电路中，“或”逻辑可通过或门来实现，只要有一个输入为高电平，输出就是高电平。</p>
+<h3 id="3、“非”逻辑-NOR"><a href="#3、“非”逻辑-NOR" class="headerlink" title="3、“非”逻辑(NOR)"></a>3、“非”逻辑(NOR)</h3><p>  定义：“非”逻辑是一种基本的逻辑运算，通常用符号“!” 或变量上方加“-”、或“ ′ ”表示，“非”逻辑的作用是对输入的逻辑值进行取反操作。也就是说，如果输入为真（通常用 1 表示），经过“非”逻辑运算后，输出为假（通常用 0 表示）；如果输入为假（0），则输出为真（1）。</p>
+<p>例如，假设输入为变量 A ：</p>
+<ul>
+<li>当 A &#x3D; 1（真）时，“非”A 的结果为 0（假）。</li>
+<li>当 A &#x3D; 0（假）时，“非”A 的结果为 1（真）。</li>
+</ul>
+<p>在逻辑代数中，以 “ ′ “表示“非”运算，A进行逻辑“非”运算时可以写成<br>  Y &#x3D; ¯A<br>“非”门的逻辑符号如下所示。<br>  <img src="/images/fei.png" alt="非" title="非"></p>
+<p>说明：在计算机编程中，“非”逻辑常用于条件的反转判断。比如，当判断某个变量不应为某个特定值时，就会用到“非”逻辑。在数字电路中，“非”逻辑通过非门来实现，输入的电平状态会被反转后输出。</p>
+<h3 id="4、“异或”逻辑-EXCLUSIVE-OR-XOR"><a href="#4、“异或”逻辑-EXCLUSIVE-OR-XOR" class="headerlink" title="4、“异或”逻辑(EXCLUSIVE OR&#x2F;&#x2F;XOR)"></a>4、“异或”逻辑(EXCLUSIVE OR&#x2F;&#x2F;XOR)</h3><p>  定义：“异或”逻辑是一种基本的逻辑运算，通常用符号“⊕”或“XOR”表示。“异或”逻辑的运算规则是：当两个输入值不同时，结果为 1（真）；当两个输入值相同时，结果为 0（假）。</p>
+<p>例如 设有两个条件 A 和 B：</p>
+<ul>
+<li>当 A &#x3D; 0 ，B &#x3D; 0 时，A ⊕ B &#x3D; 0 。</li>
+<li>当 A &#x3D; 0 ，B &#x3D; 1 时，A ⊕ B &#x3D; 1 。</li>
+<li>当 A &#x3D; 1 ，B &#x3D; 0 时，A ⊕ B &#x3D; 1 。</li>
+<li>当 A &#x3D; 1 ，B &#x3D; 1 时，A ⊕ B &#x3D; 0 。</li>
+</ul>
+<p>在A与B进行“异或”运算时可以写成<br><span class="ztext-math" data-eeimg="1" data-tex="Y=A\oplus B=A\cdot \bar{B}+ \bar{A}\cdot B">Y&#x3D;A\oplus B&#x3D;A\cdot \bar{B}+ \bar{A}\cdot B</span><br> “异或”门的逻辑符号如下所示。<br>   <img src="/images/yihuo.png" alt="异或" title="异或"></p>
+<p>说明：在数字电路中，异或门是实现“异或”逻辑的基本逻辑门。它常用于数据的加密、纠错编码以及数字信号处理等方面。在计算机编程中，“异或”逻辑常用于数据的加密和解密、位运算以及一些特殊的条件判断等。例如，通过对数据进行“异或”操作来实现简单的加密，或者在某些算法中通过“异或”来交换两个变量的值而无需使用临时变量。</p>
+<h2 id="逻辑变量与逻辑函数及常用复合逻辑运算"><a href="#逻辑变量与逻辑函数及常用复合逻辑运算" class="headerlink" title="逻辑变量与逻辑函数及常用复合逻辑运算"></a>逻辑变量与逻辑函数及常用复合逻辑运算</h2><p>1、逻辑变量<br>  逻辑变量是在逻辑运算中使用的变量，其取值通常只有两种：真（通常用 1 表示）和假（通常用 0 表示）。逻辑变量在许多领域都有重要应用。</p>
+<p>例如，在计算机编程中，我们使用逻辑变量来表示条件的满足与否，从而控制程序的执行流程。假设我们有一个逻辑变量 isLoggedIn ，如果用户已经登录，isLoggedIn 的值为 1 ，否则为 0 。</p>
+<p>在数字电路设计中，逻辑变量可以表示电路中某个节点的信号状态是高电平（1）还是低电平（0）。逻辑变量的运算遵循基本的逻辑运算规则，如与、或、非等，通过这些运算可以组合和处理逻辑关系，实现各种逻辑功能和判断。</p>
+<p>2、原变量和反变量<br>  字母上无反号的称为原变量，字母上有反号的是反变量。</p>
+<p>3、逻辑函数<br>  逻辑函数是一种以逻辑变量为输入，并根据特定的逻辑规则产生输出的函数。逻辑函数通常用布尔代数来表示和处理。它将输入的逻辑变量通过与、或、非等基本逻辑运算以及它们的组合，得到一个确定的逻辑输出值。</p>
+<p>例如，假设有两个逻辑变量 A 和 B ，一个简单的逻辑函数可以表示为 Y&#x3D; A &amp;&amp; B （其中 &amp;&amp; 表示与运算），这意味着只有当 A 和 B 都为真时，函数 Y 的值才为真。逻辑函数在数字电路设计中有着广泛的应用。通过设计逻辑函数，可以实现各种复杂的电路功能，如加法器、计数器、编码器等。在计算机编程中，逻辑函数也常用于条件判断和控制程序的流程。例如，判断一个数是否在某个范围内，或者根据用户的不同操作执行不同的代码块。</p>
+<p>此外，在逻辑推理、自动化控制等领域，逻辑函数也发挥着重要作用，帮助我们分析和解决各种与逻辑关系相关的问题。</p>
+<p>4、常用符合逻辑运算<br>  最常见的复合逻辑运算有与非(NAND)，或非(NOR)，同或(EXCLUSIVE NOR&#x2F;&#x2F;XNOR )，与或非(AND-NOR)等。</p>
+<p>①“与非”逻辑(NAND)</p>
+<p>“与非”逻辑是一种复合逻辑运算，它是先对输入变量进行“与”运算，然后再对结果进行“非”运算。也就是说，只有当 A 和 B 都为 1 （真）时，与非运算的结果为 0（假） ；否则，结果为 1（真） 。</p>
+<p>例如：</p>
+<p>当 A &#x3D; 0（假），B &#x3D; 0（假） 时，<br>�⋅� &#x3D; 0（假），�⋅�¯ &#x3D; 1 （真）。<br>当 A &#x3D; 0（假），B &#x3D; 1（真） 时，<br>�⋅� &#x3D; 0（假），�⋅�¯ &#x3D; 1 （真）。<br>当 A &#x3D; 1（真），B &#x3D; 0 （假）时，<br>�⋅� &#x3D; 0（假），�⋅�¯ &#x3D; 1 （真）。<br>当 A &#x3D; 1（真），B &#x3D; 1 （真）时，<br>�⋅� &#x3D; 1（真），�⋅�¯ &#x3D; 0（假） 。<br>在 A与B进行“与非”逻辑运算时可以写为<br>�&#x3D;�⋅�¯<br>“与非”门的逻辑符号如下所示。</p>
+<p>   <img src="/images/yufei.png" alt="与非" title="与非"><br>在数字电路中，“与非”门是实现“与非”逻辑的基本逻辑门。“与非”门具有多个输入端和一个输出端。“与非”逻辑在数字电路设计、计算机科学和逻辑推理等领域都有广泛的应用。比如在组合逻辑电路的设计中，可以通过与非门构建更复杂的逻辑功能。</p>
+<p>②“或非”逻辑(NOR)</p>
+<p>“或非”逻辑是一种复合逻辑运算，它先对输入变量进行“或”运算，然后对运算结果进行“非”运算。若输入变量为 A 和 B，“或非”逻辑的表达式为：<br>）�&#x3D;(�+�）¯<br> 这意味着，只有当 A 和 B 都为 0(假) 时，“或非”运算的结果为 1 （真）；只要 A 或者 B 中有一个为 1（真） ，结果就为 0（假） 。</p>
+<p>例如：<br>当 A &#x3D; 0（假），B &#x3D; 0（假） 时，A+B&#x3D; 0（假），<br>）(�+�）¯ &#x3D; 1（真） 。<br>当 A &#x3D; 0（假），B &#x3D; 1 （真）时，A+B &#x3D; 1（真），<br>）(�+�）¯ &#x3D; 0 （假）。<br>当 A &#x3D; 1（真），B &#x3D; 0（假） 时，A+B &#x3D; 1（真），<br>）(�+�）¯ &#x3D; 0 （假）。<br>当 A &#x3D; 1（真），B &#x3D; 1（真） 时，A+B &#x3D; 1（真），<br>）(�+�）¯ &#x3D; 0（假） 。<br>在A与B进行“或非”逻辑运算时可以写成<br>）�&#x3D;(�+�）¯<br>“或非”门的逻辑符号如下所示。<br>   <img src="/images/huofei.png" alt="或非" title="或非"></p>
+<p>在数字电路中，或非门是实现或非逻辑的基本逻辑门，具有多个输入端和一个输出端。或非逻辑在数字电路设计中用途广泛。例如，可以用或非门来构建计数器、寄存器等复杂的数字电路组件。在计算机编程中，或非逻辑的思想也可以用于条件判断和逻辑处理，帮助实现各种复杂的功能和算法。</p>
+<p>③“同或”逻辑(EXCLUSIVE NOR&#x2F;&#x2F;XNOR )</p>
+<p>“同或”逻辑属于复合逻辑，“同或”逻辑可以通过基本逻辑运算（如与、或、非）来表示。通常用符号“⊙”或“XNOR”表示。“同或”逻辑的运算规则是：当两个输入值相同时，结果为 1（真）；当两个输入值不同时，结果为 0（假）。</p>
+<p>例如</p>
+<p>当 A &#x3D; 0（假） ，B &#x3D; 0 （假）时，A ⊙ B &#x3D; 1 （真）。<br>当 A &#x3D; 0 （假），B &#x3D; 1（真） 时，A ⊙ B &#x3D; 0 （假）。<br>当 A &#x3D; 1（真） ，B &#x3D; 0 （假）时，A ⊙ B &#x3D; 0 （假）。<br>当 A &#x3D; 1（真） ，B &#x3D; 1 （真）时，A ⊙ B &#x3D; 1 （真）。<br>在A与B进行“同或”逻辑运算时可以写成<br>�&#x3D;�⊙�&#x3D;�⋅�+�¯⋅�¯<br> “同或”门的逻辑符号如下所示。<br>   <img src="/images/tonghuo.png" alt="同或" title="同或"><br>“同或”逻辑在数字电路设计和计算机编程中也有一定的应用。例如，在某些逻辑电路的设计中，用于特定的条件判断和信号处理。在编程中，可以用于数据的比较和特定的位运算操作。</p>
+<p>④“与或非”逻辑(AND-NOR)</p>
+<p>“与或非”逻辑是一种较为复杂的逻辑运算，它结合了与、或、非这三种基本逻辑运算。其运算过程通常是先分别进行与运算和或运算，然后对这两个运算的结果进行非运算。假设我们有输入变量 A、B、C 和 D。先计算“与”的结果，比如<br>�&#x3D;�⋅� ，�&#x3D;�⋅�<br> ；再计算“或”的结果，比如<br>�&#x3D;�+�<br> ；最后进行“非”运算，得到最终结果<br>�&#x3D;�¯。</p>
+<p>例如</p>
+<p>A	B	C	D	E	F	G	Y<br>0	0	0	0	0	0	0	1<br>0	0	0	1	0	0	0	1<br>0	0	1	0	0	0	0	1<br>0	0	1	1	0	1	1	0<br>0	1	0	0	0	0	0	1<br>0	1	0	1	0	0	0	1<br>0	1	1	0	0	0	0	1<br>0	1	1	1	0	1	1	0<br>1	0	0	0	0	0	0	1<br>1	0	0	1	0	0	0	1<br>1	0	1	0	0	0	0	1<br>1	0	1	1	0	1	1	0<br>1	1	0	0	1	0	1	0<br>1	1	0	1	1	0	1	0<br>1	1	1	0	1	0	1	0<br>1	1	1	1	1	1	1	0</p>
+<p>在A、B、C、D进行“与或非”运算时可以写成<br>� &#x3D; (�⋅�+�⋅�)¯</p>
+<p>“与或非”门的逻辑符号如下所示。<br>   <img src="/images/yuhuofei.png" alt="与或非" title="与或非"><br>“与或非”逻辑在数字电路设计中具有重要作用，可以用于构建复杂的逻辑电路，实现各种特定的功能。例如，在微处理器的设计中，用于指令的解码和执行控制等。</p>
+<p>在计算机编程中，也可以通过嵌套的条件判断语句来模拟“与或非”逻辑，以实现复杂的条件分支和逻辑处理。</p>
+<h2 id="三、逻辑公式"><a href="#三、逻辑公式" class="headerlink" title="三、逻辑公式"></a>三、逻辑公式</h2><p>  布尔恒等式是在布尔代数中，始终成立的等式关系。 一些常见的布尔恒等式包括：<br>    <img src="/images/dinglv1.png" alt="定律1" title="定律1"><br>    <img src="/images/dinglv2.png" alt="定律2" title="定律2"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/" rel="tag"># 逻辑运算</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/09/12/2024-09-12-%E8%BF%9B%E5%88%B6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%BD%AC%E6%8D%A2/" rel="prev" title="进制讲解与互转">
+      <i class="fa fa-chevron-left"></i> 进制讲解与互转
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E7%A7%8D%E5%9F%BA%E6%9C%AC%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="nav-number">1.</span> <span class="nav-text">四种基本逻辑运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E2%80%9C%E4%B8%8E%E2%80%9D%E9%80%BB%E8%BE%91%EF%BC%88AND%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">1、“与”逻辑（AND）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E2%80%9C%E6%88%96%E2%80%9D%E9%80%BB%E8%BE%91-OR"><span class="nav-number">1.2.</span> <span class="nav-text">2、“或”逻辑(OR)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E2%80%9C%E9%9D%9E%E2%80%9D%E9%80%BB%E8%BE%91-NOR"><span class="nav-number">1.3.</span> <span class="nav-text">3、“非”逻辑(NOR)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E2%80%9C%E5%BC%82%E6%88%96%E2%80%9D%E9%80%BB%E8%BE%91-EXCLUSIVE-OR-XOR"><span class="nav-number">1.4.</span> <span class="nav-text">4、“异或”逻辑(EXCLUSIVE OR&#x2F;&#x2F;XOR)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E5%8F%98%E9%87%8F%E4%B8%8E%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%A4%8D%E5%90%88%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="nav-number">2.</span> <span class="nav-text">逻辑变量与逻辑函数及常用复合逻辑运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E9%80%BB%E8%BE%91%E5%85%AC%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">三、逻辑公式</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Loki</p>
+  <div class="site-description" itemprop="description">大龄Java程序转行嵌入式学习之路</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Loki</span>
+</div>
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

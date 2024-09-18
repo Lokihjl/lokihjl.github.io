@@ -34,11 +34,12 @@
 <meta property="og:image" content="https://lokihjl.github.io/images/yufei.png">
 <meta property="og:image" content="https://lokihjl.github.io/images/huofei.png">
 <meta property="og:image" content="https://lokihjl.github.io/images/tonghuo.png">
+<meta property="og:image" content="https://lokihjl.github.io/images/and_nor.png">
 <meta property="og:image" content="https://lokihjl.github.io/images/yuhuofei.png">
 <meta property="og:image" content="https://lokihjl.github.io/images/dinglv1.png">
 <meta property="og:image" content="https://lokihjl.github.io/images/dinglv2.png">
 <meta property="article:published_time" content="2024-09-14T11:36:20.000Z">
-<meta property="article:modified_time" content="2024-09-14T07:27:44.446Z">
+<meta property="article:modified_time" content="2024-09-18T00:54:28.314Z">
 <meta property="article:author" content="Loki">
 <meta property="article:tag" content="逻辑运算">
 <meta name="twitter:card" content="summary">
@@ -181,10 +182,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-09-14 19:36:20 / 修改时间：15:27:44" itemprop="dateCreated datePublished" datetime="2024-09-14T19:36:20+08:00">2024-09-14</time>
+              <time title="创建时间：2024-09-14 19:36:20" itemprop="dateCreated datePublished" datetime="2024-09-14T19:36:20+08:00">2024-09-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-18 08:54:28" itemprop="dateModified" datetime="2024-09-18T08:54:28+08:00">2024-09-18</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -251,25 +258,29 @@
 <p>例如，假设有两个逻辑变量 A 和 B ，一个简单的逻辑函数可以表示为 Y&#x3D; A &amp;&amp; B （其中 &amp;&amp; 表示与运算），这意味着只有当 A 和 B 都为真时，函数 Y 的值才为真。逻辑函数在数字电路设计中有着广泛的应用。通过设计逻辑函数，可以实现各种复杂的电路功能，如加法器、计数器、编码器等。在计算机编程中，逻辑函数也常用于条件判断和控制程序的流程。例如，判断一个数是否在某个范围内，或者根据用户的不同操作执行不同的代码块。</p>
 <p>此外，在逻辑推理、自动化控制等领域，逻辑函数也发挥着重要作用，帮助我们分析和解决各种与逻辑关系相关的问题。</p>
 <p>4、常用符合逻辑运算<br>  最常见的复合逻辑运算有与非(NAND)，或非(NOR)，同或(EXCLUSIVE NOR&#x2F;&#x2F;XNOR )，与或非(AND-NOR)等。</p>
-<p>①“与非”逻辑(NAND)</p>
+<ul>
+<li>“与非”逻辑(NAND)</li>
+</ul>
 <p>“与非”逻辑是一种复合逻辑运算，它是先对输入变量进行“与”运算，然后再对结果进行“非”运算。也就是说，只有当 A 和 B 都为 1 （真）时，与非运算的结果为 0（假） ；否则，结果为 1（真） 。</p>
-<p>例如：</p>
-<p>当 A &#x3D; 0（假），B &#x3D; 0（假） 时，<br>�⋅� &#x3D; 0（假），�⋅�¯ &#x3D; 1 （真）。<br>当 A &#x3D; 0（假），B &#x3D; 1（真） 时，<br>�⋅� &#x3D; 0（假），�⋅�¯ &#x3D; 1 （真）。<br>当 A &#x3D; 1（真），B &#x3D; 0 （假）时，<br>�⋅� &#x3D; 0（假），�⋅�¯ &#x3D; 1 （真）。<br>当 A &#x3D; 1（真），B &#x3D; 1 （真）时，<br>�⋅� &#x3D; 1（真），�⋅�¯ &#x3D; 0（假） 。<br>在 A与B进行“与非”逻辑运算时可以写为<br>�&#x3D;�⋅�¯<br>“与非”门的逻辑符号如下所示。</p>
+<p>例如：(说明⋅¯  符号¯在⋅的上面)</p>
+<p>当 A &#x3D; 0（假），B &#x3D; 0（假） 时， A⋅B &#x3D; 0（假），A⋅¯B &#x3D; 1 （真）。<br>当 A &#x3D; 0（假），B &#x3D; 1（真） 时， A⋅B &#x3D; 0（假），A⋅¯B &#x3D; 1 （真）。<br>当 A &#x3D; 1（真），B &#x3D; 0 （假）时， A⋅B &#x3D; 0（假），A⋅¯B &#x3D; 1 （真）。<br>当 A &#x3D; 1（真），B &#x3D; 1 （真）时， A⋅B &#x3D; 1（真），A⋅¯B &#x3D; 0（假） 。<br>在 A与B进行“与非”逻辑运算时可以写为 Y &#x3D; A⋅¯B “与非”门的逻辑符号如下所示。</p>
 <p>   <img src="/images/yufei.png" alt="与非" title="与非"><br>在数字电路中，“与非”门是实现“与非”逻辑的基本逻辑门。“与非”门具有多个输入端和一个输出端。“与非”逻辑在数字电路设计、计算机科学和逻辑推理等领域都有广泛的应用。比如在组合逻辑电路的设计中，可以通过与非门构建更复杂的逻辑功能。</p>
-<p>②“或非”逻辑(NOR)</p>
-<p>“或非”逻辑是一种复合逻辑运算，它先对输入变量进行“或”运算，然后对运算结果进行“非”运算。若输入变量为 A 和 B，“或非”逻辑的表达式为：<br>）�&#x3D;(�+�）¯<br> 这意味着，只有当 A 和 B 都为 0(假) 时，“或非”运算的结果为 1 （真）；只要 A 或者 B 中有一个为 1（真） ，结果就为 0（假） 。</p>
-<p>例如：<br>当 A &#x3D; 0（假），B &#x3D; 0（假） 时，A+B&#x3D; 0（假），<br>）(�+�）¯ &#x3D; 1（真） 。<br>当 A &#x3D; 0（假），B &#x3D; 1 （真）时，A+B &#x3D; 1（真），<br>）(�+�）¯ &#x3D; 0 （假）。<br>当 A &#x3D; 1（真），B &#x3D; 0（假） 时，A+B &#x3D; 1（真），<br>）(�+�）¯ &#x3D; 0 （假）。<br>当 A &#x3D; 1（真），B &#x3D; 1（真） 时，A+B &#x3D; 1（真），<br>）(�+�）¯ &#x3D; 0（假） 。<br>在A与B进行“或非”逻辑运算时可以写成<br>）�&#x3D;(�+�）¯<br>“或非”门的逻辑符号如下所示。<br>   <img src="/images/huofei.png" alt="或非" title="或非"></p>
+<ul>
+<li>“或非”逻辑(NOR)<br> （符号说明：+¯， 在+号上面有¯）<br>“或非”逻辑是一种复合逻辑运算，它先对输入变量进行“或”运算，然后对运算结果进行“非”运算。若输入变量为 A 和 B，“或非”逻辑的表达式为：Y &#x3D;(A+¯B）这意味着，只有当 A 和 B 都为 0(假) 时，“或非”运算的结果为 1 （真）；只要 A 或者 B 中有一个为 1（真） ，结果就为 0（假） 。</li>
+</ul>
+<p>例如：<br>当 A &#x3D; 0（假），B &#x3D; 0（假） 时，A+B &#x3D; 0（假），（A+¯B） &#x3D; 1（真）。<br>当 A &#x3D; 0（假），B &#x3D; 1 （真）时，A+B &#x3D; 1（真），（A+¯B） &#x3D; 0（假）。<br>当 A &#x3D; 1（真），B &#x3D; 0（假） 时，A+B &#x3D; 1（真），（A+¯B） &#x3D; 0（假）。<br>当 A &#x3D; 1（真），B &#x3D; 1（真） 时，A+B &#x3D; 1（真），（A+¯B） &#x3D; 0（假）。<br>在A与B进行“或非”逻辑运算时可以写成 Y &#x3D; （A+¯B）“或非”门的逻辑符号如下所示。<br>   <img src="/images/huofei.png" alt="或非" title="或非"></p>
 <p>在数字电路中，或非门是实现或非逻辑的基本逻辑门，具有多个输入端和一个输出端。或非逻辑在数字电路设计中用途广泛。例如，可以用或非门来构建计数器、寄存器等复杂的数字电路组件。在计算机编程中，或非逻辑的思想也可以用于条件判断和逻辑处理，帮助实现各种复杂的功能和算法。</p>
-<p>③“同或”逻辑(EXCLUSIVE NOR&#x2F;&#x2F;XNOR )</p>
+<ul>
+<li>“同或”逻辑(EXCLUSIVE NOR&#x2F;&#x2F;XNOR )</li>
+</ul>
 <p>“同或”逻辑属于复合逻辑，“同或”逻辑可以通过基本逻辑运算（如与、或、非）来表示。通常用符号“⊙”或“XNOR”表示。“同或”逻辑的运算规则是：当两个输入值相同时，结果为 1（真）；当两个输入值不同时，结果为 0（假）。</p>
 <p>例如</p>
-<p>当 A &#x3D; 0（假） ，B &#x3D; 0 （假）时，A ⊙ B &#x3D; 1 （真）。<br>当 A &#x3D; 0 （假），B &#x3D; 1（真） 时，A ⊙ B &#x3D; 0 （假）。<br>当 A &#x3D; 1（真） ，B &#x3D; 0 （假）时，A ⊙ B &#x3D; 0 （假）。<br>当 A &#x3D; 1（真） ，B &#x3D; 1 （真）时，A ⊙ B &#x3D; 1 （真）。<br>在A与B进行“同或”逻辑运算时可以写成<br>�&#x3D;�⊙�&#x3D;�⋅�+�¯⋅�¯<br> “同或”门的逻辑符号如下所示。<br>   <img src="/images/tonghuo.png" alt="同或" title="同或"><br>“同或”逻辑在数字电路设计和计算机编程中也有一定的应用。例如，在某些逻辑电路的设计中，用于特定的条件判断和信号处理。在编程中，可以用于数据的比较和特定的位运算操作。</p>
-<p>④“与或非”逻辑(AND-NOR)</p>
-<p>“与或非”逻辑是一种较为复杂的逻辑运算，它结合了与、或、非这三种基本逻辑运算。其运算过程通常是先分别进行与运算和或运算，然后对这两个运算的结果进行非运算。假设我们有输入变量 A、B、C 和 D。先计算“与”的结果，比如<br>�&#x3D;�⋅� ，�&#x3D;�⋅�<br> ；再计算“或”的结果，比如<br>�&#x3D;�+�<br> ；最后进行“非”运算，得到最终结果<br>�&#x3D;�¯。</p>
-<p>例如</p>
-<p>A	B	C	D	E	F	G	Y<br>0	0	0	0	0	0	0	1<br>0	0	0	1	0	0	0	1<br>0	0	1	0	0	0	0	1<br>0	0	1	1	0	1	1	0<br>0	1	0	0	0	0	0	1<br>0	1	0	1	0	0	0	1<br>0	1	1	0	0	0	0	1<br>0	1	1	1	0	1	1	0<br>1	0	0	0	0	0	0	1<br>1	0	0	1	0	0	0	1<br>1	0	1	0	0	0	0	1<br>1	0	1	1	0	1	1	0<br>1	1	0	0	1	0	1	0<br>1	1	0	1	1	0	1	0<br>1	1	1	0	1	0	1	0<br>1	1	1	1	1	1	1	0</p>
-<p>在A、B、C、D进行“与或非”运算时可以写成<br>� &#x3D; (�⋅�+�⋅�)¯</p>
-<p>“与或非”门的逻辑符号如下所示。<br>   <img src="/images/yuhuofei.png" alt="与或非" title="与或非"><br>“与或非”逻辑在数字电路设计中具有重要作用，可以用于构建复杂的逻辑电路，实现各种特定的功能。例如，在微处理器的设计中，用于指令的解码和执行控制等。</p>
+<p>当 A &#x3D; 0（假） ，B &#x3D; 0 （假）时，A ⊙ B &#x3D; 1 （真）。<br>当 A &#x3D; 0 （假），B &#x3D; 1（真） 时，A ⊙ B &#x3D; 0 （假）。<br>当 A &#x3D; 1（真） ，B &#x3D; 0 （假）时，A ⊙ B &#x3D; 0 （假）。<br>当 A &#x3D; 1（真） ，B &#x3D; 1 （真）时，A ⊙ B &#x3D; 1 （真）。<br>在A与B进行“同或”逻辑运算时可以写成 Y &#x3D; A ⊙ B&#x3D; A⋅B + A¯⋅B¯ “同或”门的逻辑符号如下所示。<br>   <img src="/images/tonghuo.png" alt="同或" title="同或"><br>“同或”逻辑在数字电路设计和计算机编程中也有一定的应用。例如，在某些逻辑电路的设计中，用于特定的条件判断和信号处理。在编程中，可以用于数据的比较和特定的位运算操作。</p>
+<ul>
+<li>“与或非”逻辑(AND-NOR)</li>
+</ul>
+<p>“与或非”逻辑是一种较为复杂的逻辑运算，它结合了与、或、非这三种基本逻辑运算。其运算过程通常是先分别进行与运算和或运算，然后对这两个运算的结果进行非运算。假设我们有输入变量 A、B、C 和 D。先计算“与”的结果，比如<br> E&#x3D;A⋅B ，F&#x3D;C⋅D；再计算“或”的结果，比如 G&#x3D;E+F；最后进行“非”运算，得到最终结果 Y&#x3D;G¯。<br>例如<br>   <img src="/images/and_nor.png" alt="与或非" title="与或非"></p>
+<p>在A、B、C、D进行“与或非”运算时可以写成 Y &#x3D; (A⋅B+¯C⋅D) “与或非”门的逻辑符号如下所示。<br>   <img src="/images/yuhuofei.png" alt="与或非" title="与或非"><br>“与或非”逻辑在数字电路设计中具有重要作用，可以用于构建复杂的逻辑电路，实现各种特定的功能。例如，在微处理器的设计中，用于指令的解码和执行控制等。</p>
 <p>在计算机编程中，也可以通过嵌套的条件判断语句来模拟“与或非”逻辑，以实现复杂的条件分支和逻辑处理。</p>
 <h2 id="三、逻辑公式"><a href="#三、逻辑公式" class="headerlink" title="三、逻辑公式"></a>三、逻辑公式</h2><p>  布尔恒等式是在布尔代数中，始终成立的等式关系。 一些常见的布尔恒等式包括：<br>    <img src="/images/dinglv1.png" alt="定律1" title="定律1"><br>    <img src="/images/dinglv2.png" alt="定律2" title="定律2"></p>
 
